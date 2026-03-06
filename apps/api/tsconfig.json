@@ -1,0 +1,9 @@
+{
+  "extends": "@app/tsconfig/hono.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

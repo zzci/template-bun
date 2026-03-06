@@ -1,0 +1,65 @@
+# dependencies
+node_modules/
+
+# build output
+dist
+out
+*.tgz
+
+# coverage
+coverage
+*.lcov
+.nyc_output
+
+# logs
+logs
+*.log
+*.log*
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# TypeScript
+*.tsbuildinfo
+
+# caches
+.cache
+.eslintcache
+.stylelintcache
+.biome/
+
+# dotenv
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# OS
+.DS_Store
+
+# IDEs
+.idea
+.vscode
+
+# database
+data/
+
+# Claude Code
+.claude.json
+.claude/
+
+# npm cache (leaked via ~/ symlink)
+~/
+
+# build analysis
+apps/frontend/stats.html
+
+# core dumps
+core
+
+# temp
+tmp/

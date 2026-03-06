@@ -1,0 +1,37 @@
+{
+  "name": "@app/root",
+  "private": true,
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "typescript": "^5.7.2",
+      "zod": "^4.3.6"
+    }
+  },
+  "scripts": {
+    "dev": "bun --filter '@app/api' --filter '@app/frontend' dev",
+    "dev:api": "bun --filter '@app/api' dev",
+    "dev:web": "bun --filter '@app/frontend' dev",
+    "build": "bun --filter '@app/frontend' build",
+    "start": "bun --filter '@app/api' start",
+    "test": "bun --parallel --filter '*' test",
+    "test:api": "bun --filter '@app/api' test",
+    "test:web": "bun --filter '@app/frontend' test",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --fix",
+    "format": "biome format . --write",
+    "format:check": "biome check . --formatter-enabled=true --linter-enabled=false",
+    "db:generate": "bun --filter '@app/api' db:generate",
+    "db:migrate": "bun --filter '@app/api' db:migrate",
+    "db:reset": "bun --filter '@app/api' db:reset"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@app/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

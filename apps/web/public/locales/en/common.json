@@ -1,0 +1,10 @@
+{
+  "app": {
+    "title": "App"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
